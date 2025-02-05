@@ -28,13 +28,8 @@ constructor(private tasksService:TasksService) {
   onStartAddTask() {
     this.isAddingTask = true;
   }
-  onCancelAddTask() {
+  onCloseAddTask() {
     this.isAddingTask = false;
-  }
-
-  onAddTask(taskData: NewTaskData) {
-
-
   }
 
  }
