@@ -7,7 +7,7 @@ import { type NewTaskData } from './task/task.model';
   selector: 'app-tasks',
   imports: [TaskComponent, NewTaskComponent],
   templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css'
+  styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent {
   @Input({required:true}) userId!: string;

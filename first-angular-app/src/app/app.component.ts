@@ -5,12 +5,13 @@ import { UserComponent } from "./user/user.component";
 import { DUMMY_USERS } from './dummy-users';
 import { TasksComponent } from "./tasks/tasks.component";
 import { NgFor, NgIf } from '@angular/common';
+import { CardComponent } from './shared/card/card.component';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, UserComponent, TasksComponent, NgFor, NgIf],
+  imports: [HeaderComponent, UserComponent, TasksComponent, CardComponent, NgFor, NgIf],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'first-angular-app';
