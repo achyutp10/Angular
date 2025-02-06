@@ -21,8 +21,8 @@ import { CardComponent } from "../shared/card/card.component";
 
 @Component({
   selector: 'app-user',
-  standalone: true,
-  imports: [CardComponent],
+  standalone: false,
+  // imports: [CardComponent],
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
