@@ -9,7 +9,8 @@ import { CardComponent } from './shared/card/card.component';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, UserComponent, TasksComponent, CardComponent, NgFor, NgIf],
+  // imports: [HeaderComponent, UserComponent, TasksComponent, CardComponent, NgFor, NgIf],
+  imports: [HeaderComponent, UserComponent, TasksComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
