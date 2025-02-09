@@ -4,14 +4,14 @@ import type { InvestmentInput } from "./investment-input.model";
 @Injectable({providedIn: 'root'})
 
 export class InvestmentService{
-  resultData? : {
+  resultData = signal<{
     year: number;
     interest: number;
     valueEndOfYear: number;
     annualInvestment: number;
     totalInterest: number;
     totalAmountInvested: number;
-  }[]
+  }[] | undefined>(undefined);
 
   calculateInvestmentResults(data: InvestmentInput) {
     const {initialInvestment,annualInvestment,expectedReturn,duration} = data;
@@ -35,10 +35,10 @@ export class InvestmentService{
     }
 
     // this.resultsData = annualData;
-    // this.resultsData.set(annualData);
+    this.resultData.set(annualData);
     // console.log(annualData);
 
-    this.resultData = annualData;
+    // this.resultData = annualData;
 
   }
 }
