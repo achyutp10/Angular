@@ -2,10 +2,10 @@
 
 <article>
   <header>
-    <img src="status.png" alt="A signal symbol" />
-    <h2>Server Status</h2>
+    <img [src]="image().src" [alt]="image().alt" />
+    <h2>{{title()}}</h2>
   </header>
-
+<ng-content />
 </article>
 
 </div>
