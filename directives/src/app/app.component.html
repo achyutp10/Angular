@@ -1,5 +1,5 @@
 <main>
-  <app-learning-resources />
+  <app-learning-resources  />
 
   <hr />
 
@@ -16,5 +16,4 @@
       <p *appAuth="'admin'" class="protected-content admin">Only Admins should see this</p>
       <p *appAuth="'user'" class="protected-content unauthenticated">Only Regular users should see this</p>
       <p *appAuth="'guest'" class="protected-content authenticated">Only guest should see this</p>
-
 </main>
