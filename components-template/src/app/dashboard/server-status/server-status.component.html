@@ -1,4 +1,5 @@
 
+<div [class.status]="currentStatus==='offline'">
 
   <!-- <div id="status"> -->
     @if (currentStatus === 'online') {
@@ -12,3 +13,4 @@
       <p>Fetching server status failed.</p>
     }
   <!-- </div> -->
+</div>
