@@ -15,6 +15,9 @@ export class NewTicketComponent implements OnInit, AfterViewInit {
   // private form = viewChild.required<ElementRef<HTMLFormElement>>('form');
   // @ViewChildren(ButtonComponent) buttons
   // @Output() add = new EventEmitter();
+  enteredTitle = '';
+  enteredText = '';
+
 
   add = output<{title:string, text:string}>();
 
@@ -28,11 +31,13 @@ export class NewTicketComponent implements OnInit, AfterViewInit {
       console.log(this.form?.nativeElement);
   }
 
-onSubmit(title: string, ticketText:string) {
-  console.log(title);
-  console.log(ticketText);
+onSubmit() {
+  // console.log(title);
+  // console.log(ticketText);
   // this.form?.nativeElement.reset();
-  this.add.emit({title: title, text: ticketText})
-  this.form?.nativeElement.reset();
+  this.add.emit({title: this.enteredTitle, text: this.enteredText})
+  // this.form?.nativeElement.reset();
+  this.enteredText = '';
+  this.enteredTitle = '';
 }
 }
