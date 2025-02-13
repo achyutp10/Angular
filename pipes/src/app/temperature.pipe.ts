@@ -19,6 +19,9 @@ export class TemperaturePipe implements PipeTransform {
     } else {
       val = value;
     }
+
+
+
     let outputTemp: number;
     if (inputType === 'cel' && outputType === 'fah') {
       outputTemp = val * (9 / 5) + 32;
@@ -28,6 +31,7 @@ export class TemperaturePipe implements PipeTransform {
     } else {
       outputTemp = val;
     }
+
     let symbol: '°C' | '°F';
     if (!outputType) {
       symbol = inputType === 'cel' ? '°C': '°F';
