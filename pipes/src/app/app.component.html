@@ -8,9 +8,9 @@
       </div>
     </header>
     <p>New York: {{ currentTemperaturs.newYork | temp: 'fah':'cel' }}</p>
-    <p>Berlin: {{ currentTemperaturs.berlin | number:'1.1-2'}}</p>
-    <p>Paris: {{ currentTemperaturs.paris | number:'1.1-2'}}</p>
-    <p>Chicago: {{ currentTemperaturs.chicago | number:'1.1-2'}}</p>
+    <p>Berlin: {{ currentTemperaturs.berlin | temp: 'cel':'fah'}}</p>
+    <p>Paris: {{ currentTemperaturs.paris | temp: 'fah':'fah'}}</p>
+    <p>Chicago: {{ currentTemperaturs.chicago | temp: 'cel':'cel'}}</p>
   </article>
 
   <article class="temperatures">
@@ -23,7 +23,7 @@
     </header>
     <ul>
       @for (temperature of historicTemperatures; track temperature) {
-      <li (click)="onReset($index)">{{ temperature }}</li>
+      <li (click)="onReset($index)">{{ temperature | temp: 'fah':'cel' }}</li>
       }
     </ul>
   </article>
