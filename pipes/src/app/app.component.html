@@ -4,13 +4,13 @@
       <img src="temp-icon.png" alt="Thermometer icon" />
       <div>
         <h2>Current Temperatures</h2>
-        <p>{{ currentDate | date }}</p>
+        <p>{{ currentDate | date: 'medium' }}</p>
       </div>
     </header>
-    <p>New York: {{ currentTemperaturs.newYork }}</p>
-    <p>Berlin: {{ currentTemperaturs.berlin }}</p>
-    <p>Paris: {{ currentTemperaturs.paris }}</p>
-    <p>Chicago: {{ currentTemperaturs.chicago }}</p>
+    <p>New York: {{ currentTemperaturs.newYork | number:'1.1-2' }}</p>
+    <p>Berlin: {{ currentTemperaturs.berlin | number:'1.1-2'}}</p>
+    <p>Paris: {{ currentTemperaturs.paris | number:'1.1-2'}}</p>
+    <p>Chicago: {{ currentTemperaturs.chicago | number:'1.1-2'}}</p>
   </article>
 
   <article class="temperatures">
