@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { TasksComponent } from './tasks/tasks.component';
+import { LoggingService } from './logging.service';
 
 @Component({
   selector: 'app-root',
