@@ -156,4 +156,8 @@
     <button type="button" class="button button-flat" (click)="onReset()">Reset</button>
     <button type="submit" class="button">Sign up</button>
   </p>
+
+  @if (form.dirty && form.touched && form.invalid) {
+    <p class="control-error">Invalid-Form</p>
+  }
 </form>
