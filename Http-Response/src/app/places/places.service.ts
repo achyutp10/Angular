@@ -2,7 +2,7 @@ import { inject, Injectable, signal } from '@angular/core';
 
 import { Place } from './place.model';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map, throwError } from 'rxjs';
+import { catchError, map, tap, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +14,13 @@ export class PlacesService {
   loadedUserPlaces = this.userPlaces.asReadonly();
 
   loadAvailablePlaces() {
-    return this.fetchPlaces('http://localhost:3000/places', 'Something went wrong.')
+    return this.fetchPlaces(
+      'http://localhost:3000/places',
+      'Something went wrong.'
+    ).pipe(
+      tap({
+      next: (userPlaces) => this.userPlaces.set(userPlaces)
+    }))
   }
 
   loadUserPlaces() {
