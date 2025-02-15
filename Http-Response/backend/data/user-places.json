@@ -1,1 +1,32 @@
-[{"id":"p1","title":"Forest Waterfall","image":{"src":"forest-waterfall.jpg","alt":"A tranquil forest with a cascading waterfall amidst greenery."},"lat":44.5588,"lon":-80.344},{"id":"p6","title":"Amazon Rainforest Canopy","image":{"src":"rainforest.jpg","alt":"Lush canopy of a rainforest, teeming with life."},"lat":-3.4653,"lon":-62.2159},{"id":"p4","title":"Caribbean Beach","image":{"src":"caribbean-beach.jpg","alt":"Pristine white sand and turquoise waters of a Caribbean beach."},"lat":18.2208,"lon":-66.5901}]
+[
+  {
+    "id": "p18",
+    "title": "Amazon River",
+    "image": {
+      "src": "amazon-river.jpg",
+      "alt": "Navigating the waters of the Amazon River, surrounded by dense rainforest."
+    },
+    "lat": -3.4653,
+    "lon": -58.38
+  },
+  {
+    "id": "p17",
+    "title": "Machu Picchu",
+    "image": {
+      "src": "machu-picchu.jpg",
+      "alt": "The historic Incan citadel of Machu Picchu illuminated by the morning sun."
+    },
+    "lat": -13.1631,
+    "lon": -72.545
+  },
+  {
+    "id": "p14",
+    "title": "Kerala Backwaters",
+    "image": {
+      "src": "kerala-backwaters.jpg",
+      "alt": "Tranquil waters and lush greenery of the Kerala backwaters."
+    },
+    "lat": 9.4981,
+    "lon": 76.3388
+  }
+]

@@ -17,19 +17,22 @@ export class PlacesService {
     return this.fetchPlaces(
       'http://localhost:3000/places',
       'Something went wrong.'
-    ).pipe(
+    )
+  }
+
+  loadUserPlaces() {
+    return this.fetchPlaces('http://localhost:3000/user-places', 'Something went wrong fetching fav places.')
+    .pipe(
       tap({
       next: (userPlaces) => this.userPlaces.set(userPlaces)
     }))
   }
 
-  loadUserPlaces() {
-    return this.fetchPlaces('http://localhost:3000/user-places', 'Something went wrong fetching fav places.')
-  }
+  addPlaceToUserPlaces(place: Place) {
+    this.userPlaces.update(prevPlaces => [...prevPlaces, place]);
 
-  addPlaceToUserPlaces(placeId: string) {
     return this.httpClient.put('http://localhost:3000/user-places', {
-      placeId,
+      placeId: place.id,
     });
   }
 
