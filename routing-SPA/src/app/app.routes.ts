@@ -5,5 +5,5 @@ export const routes: Routes = [
   {
     path: 'tasks', // <your-domain>/task
     component: TasksComponent,
-  }
+  },
 ]
