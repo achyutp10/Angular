@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,4 +8,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css',
   imports: [FormsModule],
 })
-export class LoginComponent {}
+export class LoginComponent {
+  onSubmit(form: NgForm) {
+    console.log(form);
+  }
+}
