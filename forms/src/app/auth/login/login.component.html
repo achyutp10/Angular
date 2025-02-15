@@ -25,13 +25,16 @@
         required
         minlength="6"
         #password="ngModel"
-
       />
     </div>
 
     <button class="button">Login</button>
   </div>
-  @if (email.touched && password.touched && form.form.invalid) {
-  <p class="control-error">Invalid Values Detected. Please check your inputs</p>
+  @if (email.touched && email.dirty && email.invalid) {
+  <p class="control-error">Invalid email Detected. Please check your inputs</p>
+  }
+  
+  @if (password.touched && password.dirty && password.invalid) {
+  <p class="control-error">Invalid password Detected. Must be 6 characters long</p>
   }
 </form>
