@@ -5,6 +5,8 @@ import { UserTasksComponent } from "./users/user-tasks/user-tasks.component";
 import { NewTaskComponent } from "./tasks/new-task/new-task.component";
 import { NotFoundComponent } from "./not-found/not-found.component";
 
+import { routes as userRoutes } from "./users/users.routes";
+
 export const routes: Routes = [
   {
     path: '',
@@ -13,21 +15,7 @@ export const routes: Routes = [
   {
     path: 'users/:userId', // <your-domain>/users/<uid>
     component: UserTasksComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: 'tasks',
-        pathMatch: 'prefix'
-      },
-      {
-        path: 'tasks', //<your-domain>/users/<uid>/tasks
-        component: TasksComponent,
-      },
-      {
-        path: 'tasks/new', //<your-domain>/users/<uid>/tasks/new
-        component: NewTaskComponent,
-      },
-    ]
+    children: userRoutes,
   },
   {
     path: '**',
