@@ -49,6 +49,14 @@ export class UserTasksComponent {
 //     });
 //     this.destroyRef.onDestroy(() => subscription.unsubscribe());
 //   }
+// ngOnInit() {
+//   console.log(this.message());
+//   this.activatedRoute.data.subscribe({
+//     next: data => {
+//       console.log(data);
+//     }
+//   })
+// }
 }
 
 export const resolveUserName: ResolveFn<string> = (
