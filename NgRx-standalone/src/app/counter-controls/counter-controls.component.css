@@ -1,0 +1,18 @@
+#buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 20rem;
+  margin: 2rem auto;
+}
+
+#buttons button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ef156c;
+  border-radius: 5px;
+  background-color: #ef156c;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
