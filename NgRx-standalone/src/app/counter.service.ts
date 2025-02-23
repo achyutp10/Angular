@@ -12,6 +12,7 @@ export class CounterService {
   }
 
   decrement() {
+    // this.counter--;
     this.counter--;
     this.counterChanged.next(this.counter)
   }
