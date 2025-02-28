@@ -22,7 +22,7 @@ export const decrement = createAction(
 // export class IncrementAction implements Action {
 //   readonly type = INCREMENT
 
-//   constructor(public value: number) {}
+  constructor(public value: number) {}
 
 // }
 
